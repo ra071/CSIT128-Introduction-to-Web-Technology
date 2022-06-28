@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>A3-Task2</title>
+	
+	<script>
+	  var studentNumber = 7295054;
+	  var increaseBy = 1;
+	  var studentNumberAnimation;
+	  var animationOn = false;
+	  
+	  function studentAnimation()
+	  {
+	    studentNumber = studentNumber + increaseBy;
+		increaseBy = increaseBy + 1;
+		var studentId = document.getElementById("studentId");
+		studentId.innerHTML = studentNumber;
+		
+	  }
+	  
+	  function startAnimation()
+	  {
+	    if(animationOn == false)
+		{
+		  animationOn = true;
+	      studentNumberAnimation = setInterval(studentAnimation,1000);
+        }		  
+	  }
+	  
+	  function stopAnimation()
+	  {
+	    if(animationOn == true)
+		{
+		  animationOn = false;
+		  studentNumber = 7295054;
+		  increaseBy = 1;
+		  clearInterval(studentNumberAnimation);
+		}
+	  }
+	</script>
+	
+  </head>
+  
+  <body>
+    
+	<button onClick="startAnimation();">
+	  Start Animation
+	</button>
+	
+	<button onClick="stopAnimation();">
+	  Stop Animation
+	</button>
+	<br />
+	
+	<span id="studentId" style="font-size:25;">
+	
+	</span>
+  </body>
+
+</html>

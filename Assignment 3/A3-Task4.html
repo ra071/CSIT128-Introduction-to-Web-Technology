@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>A3-Task4</title>
+	
+	<script>
+	  var count = 1;
+	  var timestableAnimation;
+	  var animationOn = false;
+	  
+	  function createTimestable()
+	  {
+	    // get the integer
+		var inputField = document.getElementById("input");
+		var integerValue = Number(inputField.value);
+		
+		if(count > 9)
+		{
+		 count = 1;
+		}
+		
+		var outputField = document.getElementById("table");
+		outputField.innerHTML = count + " x " 
+		                        + integerValue + " = " 
+								+ count*integerValue;
+		count = count + 1;
+	  }
+	  
+	  function startAnimation()
+	  { 
+	    if(animationOn == false)
+		{
+		animationOn = true;
+	    timestableAnimation = setInterval(createTimestable,1000);
+		}
+	  }
+	  
+	  function stopAnimation()
+	  {
+	    if(animationOn == true)
+		{
+		  animationOn = false;
+		  clearInterval(timestableAnimation);
+		  count = 1;
+		}
+	  }
+	  
+	</script>
+	
+  </head>
+  
+  <body>
+    Enter the integer to display its timestable:
+    <input type="text" size="15" id="input" />
+	<br /> 
+	
+	<button onClick="startAnimation();">
+	  Start Animation
+	</button>
+	
+	<button onClick="stopAnimation();">
+	  Stop Animation 
+	</button>
+	<br />
+	<span id="table" style="font-size:25;">
+	
+	</span>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+
+  <head>
+    <title>A3-Task3</title>
+	
+	<script>
+	  var book = "&#128214";
+	  var frog = "&#x1F438";
+	  var phone = "&#128222";
+	  var camera = "&#128247";
+	  
+	  var emoji;
+	  var animationOn = false;
+	  function randomEmoji()
+	  {
+	    // get a random number between 1 and 4
+	    var random = Math.floor((Math.random() * 4) + 1);
+		var displayEmoji = document.getElementById("emoji");
+		// display the emoji based on the random number
+		if(random == 1)
+		{
+		  displayEmoji.innerHTML = book;
+		}
+		
+		if(random == 2)
+		{
+		  displayEmoji.innerHTML = frog;
+		}
+		
+		if(random == 3)
+		{
+		  displayEmoji.innerHTML = phone;
+		}
+		
+		if(random == 4)
+		{
+		  displayEmoji.innerHTML = camera;
+		}
+		
+	  }
+	  
+	  function displayRandomEmoji()
+	  {
+	    if(animationOn == false)
+		{
+		animationOn = true;
+	    emoji = setInterval(randomEmoji,2000);
+        }		
+	  }
+	  
+	  function stop()
+	  {
+	    if (animationOn = true)
+		{
+		animationOn = false;
+	    clearInterval(emoji);
+		}
+	  }
+	
+	</script>
+  </head>
+  
+  <body>
+	<button onClick="displayRandomEmoji();">
+	  Display Random Emoji
+	</button>
+	
+	<button onClick="stop();">
+	  Stop
+	</button>
+	<br />
+	<span id="emoji" style="font-size:60">
+	
+	</span>
+  </body>
+  
+</html>

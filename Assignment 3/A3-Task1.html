@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>A3-Task1</title>
+	
+	<script>
+	  function generateTimestable(){
+	    //get the integer
+	    var inputField=document.getElementById("getInteger");
+	    var integer=Number(inputField.value);
+	  
+	    let text = "";
+		//generate timestable for the integer input and put it in the text
+	    for(let i=1;i<=10;i++){
+	      text= text + integer + " x ";
+          for(let j=1;j<=i;j++){
+            text=text + "&#x1F438";
+          }
+		  
+		  text=text+ " = " + (integer*i);
+		  text=text + "<br />";
+	    }
+		//display the timestable
+	    var displayText=document.getElementById("displayTimestable");
+	    displayText.innerHTML= text;
+	  }
+	</script>
+  </head>
+  
+  <body>
+    Enter a positive integer to generate FROG-timestable:
+    <input type="text" size="5" id="getInteger" />
+	<br />
+	<button onClick="generateTimestable();">
+	  Generate FROG-Timestable
+	</button>
+	<br />
+	<span id="displayTimestable">
+	</span>
+  </body>
+</html>
