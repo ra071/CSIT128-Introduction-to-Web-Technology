@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Assignment2 Question3</title>
+	
+	<script>
+	  var birdNumber = 1;
+	  function showBird()
+	  {
+	    birdNumber = birdNumber + 1;
+		if(birdNumber == 5)
+		{
+		birdNumber = 1;
+		}
+		//get image file name for the next bird
+		var imageFile = "bird" + birdNumber + ".png";
+		//show the image
+		var birdImage = document.getElementById("birdHolder");
+		birdImage.src = imageFile;
+		
+	  }
+	</script>
+	
+  </head>
+  
+  <body>
+    <img src="bird1.png" height="250px" width="200px" onClick="showBird();" id="birdHolder" />
+  </body>
+</html>

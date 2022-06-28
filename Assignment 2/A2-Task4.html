@@ -1,0 +1,92 @@
+<html>
+
+  <head>
+    <title>Assignment2 Question4</title>
+  
+  </head>
+  
+  <body>
+    <h1>Whosville Holiday Reserve</h1>
+	
+    <form action=" http://holiday.whosville.com/query" method="get">
+	  
+	  <table border="0">
+	    <tr>
+		  <td>
+	        Number of Adults:
+		  </td>
+		  <td>
+	        <input type="text" name="a" size="15" />
+		  </td>
+	    </tr>
+	    <tr>
+		  <td>
+	        Number of Children:
+		  </td>
+		  <td>
+	        <input type="text" name="c" size="15" />
+		  </td>
+	    </tr>
+	    <tr>
+		  <td>
+	        Accomodation Type:
+		  </td>
+		  <td>
+	        <select name="accom">
+	        <option value="1">Cabin</option>
+		    <option value="2">Dormitory</option>
+		    <option value="3">Cottage</option>
+	        </select>
+		  </td>
+	    </tr>
+	    <tr>
+		  <td>
+	        Number of Days:
+		  </td>
+		  <td>
+	        <input type="text" name="d" size="15" />
+		  </td>	
+	    </tr>
+	    <tr>
+		  <td valign="top">
+	        Cave Tours:
+		  </td>
+		  <td>
+	        <input type="checkbox" name="t" value="K" /> Ktar Koon Cave Tour
+	        </br>
+	        <input type="checkbox" name="t" value="B" /> Beyoh Boon Cave Tour
+	        <br />
+	        <input type="checkbox" name="t" value="S" /> Sontain Soon Cave Tour
+	      </td>
+	    </tr>
+	    <tr>
+		  <td valign="top">
+	        Internet Services:
+		  </td>
+		  <td>
+	        <input type="radio" name="internet" value="y" />Include Internet
+	        <br />
+	        <input type="radio" name="internet" value="n" />Do not include Internet
+		  </td>
+	    </tr>
+	    <tr>
+		  <td valign="top">
+	        Customer Query:
+	      </td>
+		  <td>
+	        <textarea name="question" rows="4" cols="40"></textarea>
+		  </td>
+	    </tr>
+	    <tr>
+		  <td>
+		  </td>
+		  <td>
+	        <input type="submit" method="Search" />
+	        <input type="reset" value="clear" />
+		  </td>
+	    </tr>
+	  </table>
+	</form>
+  </body>
+
+</html>

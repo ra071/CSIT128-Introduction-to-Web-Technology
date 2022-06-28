@@ -1,0 +1,232 @@
+<html>
+  <head>
+  
+    <title>Assignment2 Question2</title>
+	
+	<script>
+	  var sum;
+	  var product;
+	  var oddCount = 0;
+	  var evenCount  = 0;
+	  var positiveCount = 0;
+	  var negativeCount = 0;
+	  var zeroCount = 0;
+	  var maximum;
+	  var minimum;
+   	  function calculate()
+	  {
+	  //get the first integer
+	  var inputField1 = document.getElementById("input1");
+	  var integer1 = Number(inputField1.value);
+	  //check if the integer is odd or even
+	  if(integer1 % 2 == 0)
+	  {
+	      evenCount = evenCount + 1;
+	  }
+	    else if(integer1 % 2 != 0)
+	    {
+	      oddCount = oddCount + 1;
+	    }
+	  //check if it is a positive integer, negative integer or zero
+	  if(integer1 == 0)
+	  {
+	    zeroCount = zeroCount + 1;
+	  }
+	    else if(integer1 > 0)
+	    {
+	      positiveCount = positiveCount + 1;
+	    }
+	    else
+	    {
+	      negativeCount = negativeCount + 1;
+	    }
+	  
+	  //get the 2nd integer
+	  var inputField2 = document.getElementById("input2");
+	  var integer2 = Number(inputField2.value);
+	  //check if the integer is odd or even
+	  if(integer2 % 2 == 0)
+	  {
+	      evenCount = evenCount + 1;
+	  }
+	    else if(integer2 % 2 != 0)
+	    {
+	      oddCount = oddCount + 1;
+	    }
+	  //check if it is a positive integer, negative integer or zero
+	  if(integer2 == 0)
+	  {
+	    zeroCount = zeroCount + 1;
+	  }
+	    else if(integer2 > 0)
+	    {
+	      positiveCount = positiveCount + 1;
+	    }
+	    else
+	    {
+	      negativeCount = negativeCount + 1;
+	    }
+	  
+	  //get the 3rd integer
+	  var inputField3 = document.getElementById("input3");
+	  var integer3 = Number(inputField3.value);
+	  //check if the integer is odd or even
+	  if(integer3 % 2 == 0)
+	  {
+	    evenCount = evenCount + 1;
+	  }
+	    else if(integer3 % 2 != 0)
+	    {
+	      oddCount = oddCount + 1;
+	    }
+	  //check if it is a positive integer, negative integer or zero
+	  if(integer3 == 0)
+	  {
+	    zeroCount = zeroCount + 1;
+	  }
+	    else if(integer3 > 0)
+	    {
+	      positiveCount = positiveCount + 1;
+	    }
+	    else
+	    {
+	      negativeCount = negativeCount + 1;
+	    }
+	  
+	  //get the 4th integer
+	  var inputField4 = document.getElementById("input4");
+	  var integer4 = Number(inputField4.value);
+	  //check if the integer is odd or even
+	  if(integer4 % 2 == 0)
+	  {
+	    evenCount = evenCount + 1;
+	  }
+	    else if(integer4 % 2 != 0)
+	    {
+	      oddCount = oddCount + 1;
+	    }
+	  //check if it is a positive integer, negative integer or zero
+	  if(integer4 == 0)
+	  {
+	    zeroCount = zeroCount + 1;
+	  }
+	    else if(integer4 > 0)
+	    {
+	      positiveCount = positiveCount + 1;
+	    }
+	    else
+	    {
+	      negativeCount = negativeCount + 1;
+	    }
+	  
+	  //get the 5th integer
+	  var inputField5 = document.getElementById("input5");
+	  var integer5 = Number(inputField5.value);
+	  //check if the integer is odd or even
+	  if(integer5 % 2 == 0)
+	  {
+	    evenCount = evenCount + 1;
+	  }
+	    else if(integer5 % 2 != 0)
+	    {
+	    oddCount = oddCount + 1;
+	    }
+	  
+	  //check if it is a positive integer, negative integer or zero
+	  if(integer5 == 0)
+	  {
+	    zeroCount = zeroCount + 1;
+	  }
+	    else if(integer5 > 0)
+	    {
+	    positiveCount = positiveCount + 1;
+	    }
+	    else
+	    {
+	    negativeCount = negativeCount + 1;
+	    }
+	  
+	  //calculate the sum
+	    sum = integer1 + integer2 + integer3 + integer4 + integer5;
+	  
+	  //calculate the product
+	  product = integer1 * integer2 * integer3 * integer4 * integer5;
+	  
+	  // calulate the maximum and minimum integer
+	  maximum = Math.max(integer1,integer2,integer3,integer4,integer5);
+	  minimum = Math.min(integer1,integer2,integer3,integer4,integer5);
+	  
+	  var text = document.getElementById("calculation");
+	  text.innerHTML = "The sum of 5 integers: " + sum 
+	                   +"<br /> The product of 5 integers: " + product
+					   +"<br /> The maximum of five integers: "+ maximum
+					   +"<br /> The minimum of five integers: "+ minimum
+					   +"<br /> How many odd Integers: " + oddCount
+					   +"<br /> How many even Integers: "+ evenCount
+					   +"<br /> How many positive Integers: "+ positiveCount
+					   +"<br /> How many negative Integers: "+ negativeCount
+					   +"<br /> How many zeroes: "+ zeroCount;
+	  
+	  }
+	  
+	  
+	</script>
+	
+  </head>
+  
+  <body>
+    
+	<table border="0">
+	  <tr>
+	    <td>
+          Enter 1st integer:
+        </td>
+        <td>		
+          <input type ="text" size="10" id="input1" >
+		</td>
+      </tr>
+	
+	  <tr>
+	    <td>
+	      Enter 2nd integer:
+        </td>
+        <td>		
+	      <input type ="text" size="10" id="input2">
+		</td>
+	  </tr>
+	  <tr>
+	    <td>
+	      Enter 3rd integer:
+        </td>
+        <td>		
+	      <input type ="text" size="10" id="input3" >
+		</td>
+	  </tr>
+	  <tr>
+	    <td>
+	      Enter 4th integer:
+        </td>
+        <td>		
+	      <input type ="text" size="10" id="input4">
+		</td>
+	  </tr>
+	  <tr>
+	    <td>
+	      Enter 5th integer:
+        </td>
+        <td>		
+	      <input type ="text" size="10" id="input5">
+        </td>
+      </tr>		
+	</table>
+	<br /><br />
+	
+	<button onClick="calculate();">
+	  Calculate
+	</button>
+	<br /><br />
+	<span id="calculation">
+	  
+	</span>
+  </body>
+</html>

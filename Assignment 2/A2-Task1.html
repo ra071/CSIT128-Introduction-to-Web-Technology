@@ -1,0 +1,54 @@
+<html>
+
+  <head>
+  
+    <title>Assignment2 Question1</title>
+	
+	<script>
+	   //initialize the count with 0;
+	   count = 0;
+	    
+	  function addTen()
+	  {
+	    //add ten to the count
+		count = count + 10;
+		var counter = document.getElementById("counter");
+	    counter.innerHTML = count;
+	  }
+	  function minusFive()
+	  {
+	    // subtract 5 from the count
+		count = count - 5;
+		var counter = document.getElementById("counter");
+		counter.innerHTML = count;
+	  }
+	  function reset()
+	  {
+	    count = 0;
+	    var counter = document.getElementById("counter");
+		counter.innerHTML = count;
+	  }
+	</script>
+	
+  </head>
+  
+  <body>
+    <button onClick="addTen();">
+	  Add 10
+	</button>
+	
+	<button onClick="minusFive();">
+	  Minus 5
+	</button>
+	
+	<button onClick="reset();">
+	  Reset Number
+	</button>
+	
+	<br /> <br />
+	<span style="font-size:50; color:orange" id="counter">
+	  0
+	</span>
+  </body>
+
+</html>
