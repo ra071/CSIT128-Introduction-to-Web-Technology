@@ -1,0 +1,34 @@
+{
+	"firstName": "John",
+	"lastName": "Smith",
+	"libraryRecordList": [
+	{
+		"title": "Network security",
+		"authors": "K. Wrightson",
+		"callNumber": "212.37/56",
+		"dueDate": "26-07-2016",
+		"overdueStatus": ""
+	},
+	{
+		"title": "Analysis",
+		"authors": "T. Tao",
+		"callNumber": "515/465",
+		"dueDate": "23-12-2016",
+		"overdueStatus": ""
+	},
+	{
+		"title": "The art of computer programming",
+		"authors": "D.E. Knuth",
+		"callNumber": "005.1/300",
+		"dueDate": "25-11-2016",
+		"overdueStatus": "overdue"
+	},
+	{
+		"title": "Python for dummies",
+		"authors": "S. Maruch and M. Renum",
+		"callNumber": "145.3/57",
+		"dueDate": "01-10-2016",
+		"overdueStatus": "overdue"
+	}
+	]
+}
