@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>IncreaseCounter Exercise</title>
+	<script>
+	  var count = 0;
+	  var counterAnimation;
+	  var animationOn = false;
+	  
+	  function increaseCounter()
+	  { 
+	    var increaseCounter = document.getElementById("counter");
+		count = count +1;
+		increaseCounter.innerHTML = count;
+	  }
+	  
+	  function startCounterAnimation()
+	  {
+	    if (animationOn == false)
+		{
+		  animationOn = true;
+	      counterAnimation = setInterval(increaseCounter,1000);
+		}
+	  }
+	  
+	  function stopCounterAnimation()
+	  {
+	    if(animationOn == true)
+		{
+		  animationOn = false;
+	      clearInterval(counterAnimation);
+		}
+	  }
+	  
+	</script>
+	
+  </head>
+  
+  <body>
+	
+	<button onClick="startCounterAnimation();">
+	  Start Counter Animation
+	</button>
+	
+	<button onClick="stopCounterAnimation();">
+	  Stop Counter Animation
+	</button>
+	<br /> <br />
+	
+	<span id="counter" style="font-size:25;">
+	  0
+	</span>
+  </body>
+</html>

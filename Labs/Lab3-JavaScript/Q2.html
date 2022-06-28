@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Exercise-JavaScript</title>
+	
+	<script>
+	  function doLion()
+	  {
+	    //get text element
+	    var messageTextField = document.getElementById("messageBox");
+		
+		//display message in the text field
+		messageTextField.value = "The Lion Button in Clicked!";
+		
+	  }
+	  
+	  function doFrog()
+	  {
+	    //get text element
+	    var messageTextField =  document.getElementById("messageBox");
+		
+		//display message in the text field
+		messageTextField.value= "The Frog Button is Clicked! ";
+	  }
+	  
+	</script>
+	
+  </head>
+  
+  <body>
+    <button onClick="doLion();">
+	  Lion
+	</button>
+	
+	<button onClick="doFrog();">
+	  Frog
+	</button>
+	
+	<br /> <br />
+	
+	<input type="text" size="50" id="messageBox" />
+	
+  </body>
+</html>

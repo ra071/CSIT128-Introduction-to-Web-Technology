@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Exercise-JavaScript</title>
+	
+	<script>
+	  // variable to store Lion Count 
+	  var lionCount=0;
+	  // variable to store Frog Count
+	  var frogCount=0;
+	  function roar()
+	  { 
+	    //increment lion count
+	    lionCount = lionCount + 1;
+	    var lionSpan = document.getElementById("lionClickHolder");
+	    lionSpan.innerHTML = lionCount;
+	  }
+	
+	  function ribbit()
+	  { 
+	    //increment frog count
+	    frogCount = frogCount + 1;
+	    var frogSpan = document.getElementById("frogClickHolder");
+	    frogSpan.innerHTML = frogCount;
+	  }
+	
+	</script>
+  </head>
+  
+  <body>
+    <img src="lion.png" height="150px" onClick="roar();"/>
+	<img src="frog.png" height="150px" onClick="ribbit();"/>
+	
+	<br /> <br />
+	
+	<span style="color:orange">
+	   Number of Lion Clicks: 
+	   <span id="lionClickHolder">
+	    0
+	   </span>
+	</span>
+	
+	<br />
+	
+	<span style="color:green">
+	  Number of Frog Clicks:
+	  <span id="frogClickHolder">
+	    0
+	  </span>
+	</span>
+  </body>
+  
+</html>

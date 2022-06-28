@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>Drag and Drop</title>
+	
+	<style>
+	  .animalText{
+	    font-size: 60px;
+	  }
+	</style>
+	
+	<script>
+	  function dragStart(event)
+	  {
+	  //get the drag element id
+	  var dragId = event.target.id;
+	  console.log(dragId);
+	  
+	  //store drag id into data transfer object
+	  event.dataTransfer.setData("dragId", dragId);
+	  }
+	  
+	  var dogCounter=0;
+	  var catCounter=0;
+	  function drop(event)
+	  {
+	    //get the drop element id
+		var dropId = event.target.id;
+		console.log("dropId=" + dropId);
+		
+		//retrieve drag id from dataTransfer object
+		var dragId = event.dataTransfer.getData("dragId");
+		console.log("dragId=" + dragId);
+		
+		//writing drag-drop logic
+	    if((dropId=="dogText") && (dragId=="dogImage"))
+		{
+		  dogCounter++;
+		  var html = getImageHtml("dog.png",dogCounter);
+		  var dogSpan = document.getElementById("dogCountHolder");
+		  dogSpan.innerHTML = html;
+		}
+		
+		if((dropId=="catText") && (dragId=="catImage"))
+		{
+		  catCounter++;
+		  var html= getImageHtml("cat.png",catCounter);
+		  var catSpan = document.getElementById("catCountHolder");
+		  catSpan.innerHTML = html;
+		}
+	  }
+	  
+	  function getImageHtml(imageSource,count)
+	  {
+	    var html = "";
+		for(var i=0; i<count; i++)
+		{
+		  html+= "<img src='"+imageSource +"' height='100px' />";
+		}
+		return html;
+	  }
+	  
+	  function dragOver(event)
+	  {
+	    event.preventDefault();
+	  }
+	</script>
+  </head>
+  
+  <body>
+    Drag an animal and drop it on the corresponding text.
+	<br /><br />
+	
+	<div>
+	  <span class="animalText"
+	        id="dogText"
+	        onDrop="drop(event)"
+			onDragOver="dragOver(event)">
+	    DOG
+	  </span>
+	  <span id="dogCountHolder">
+	  </span>
+	</div>
+	
+	<br /><br />
+	
+	<div>
+	  <span class="animalText"
+	        id="catText"
+	        onDrop="drop(event)"
+			onDragOver="dragOver(event)">
+	    CAT
+	  </span>
+	  <span id="catCountHolder">
+	  </span>
+	</div>
+	<br /><br />
+	
+	<img src="cat.png" height="100px" 
+	     draggable="true"
+		 onDragStart="dragStart(event)"
+		 id="catImage" />
+		 
+	<img src="dog.png" height="100px"
+	     draggable="true"
+		 onDragStart="dragStart(event)"
+		 id="dogImage" />
+	
+  </body>
+
+</html>
